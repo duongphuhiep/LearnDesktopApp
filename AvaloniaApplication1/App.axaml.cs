@@ -29,7 +29,7 @@ public partial class App : Application
         services.AddLoggingService();
 
         //Everything-else is added (registered) on top of the Microsoft-things (to the DI Graph)
-        ServiceProvider = new DryIocServiceProviderFactory().CreateBuilder(services);
+        ServiceProvider = new DryIocServiceProviderFactory().CreateBuilder(services).Container;
         ServiceProvider.RegisterApplicationServices();
 
         //Make application crashed on startup when DryIoc detected something wrong with your IoC setup

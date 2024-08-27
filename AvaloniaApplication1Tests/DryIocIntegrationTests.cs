@@ -21,7 +21,7 @@ public class DryIocIntegrationTests(ITestOutputHelper _outputHelper)
                 .SetMinimumLevel(LogLevel.Debug));
 
         //Everything-else registration is added on top of the Microsoft-things
-        var container = new DryIocServiceProviderFactory().CreateBuilder(services);
+        var container = new DryIocServiceProviderFactory().CreateBuilder(services).Container;
         container.Register<IDep, X>();
         container.GetRequiredService<IDep>().ShouldBeOfType<X>();
 
