@@ -34,14 +34,14 @@ public partial class App : Application
         {
             desktop.MainWindow = new MainWindow
             {
-                DataContext = ServiceProvider.GetRequiredService<MainWindowViewModel>()
+                DataContext = ServiceProvider!.GetRequiredService<MainWindowViewModel>()
             };
         }
         else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
         {
             singleViewPlatform.MainView = new MainView
             {
-                DataContext = ServiceProvider.GetRequiredService<MainViewModel>()
+                DataContext = ServiceProvider!.GetRequiredService<MainViewModel>()
             };
         }
 

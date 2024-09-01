@@ -1,0 +1,6 @@
+[submodule "ext/Semi.Avalonia"]
+	path = ext/Semi.Avalonia
+	url = https://github.com/irihitech/Semi.Avalonia.git
+[submodule "ext/Ursa.Avalonia"]
+	path = ext/Ursa.Avalonia
+	url = https://github.com/irihitech/Ursa.Avalonia.git
